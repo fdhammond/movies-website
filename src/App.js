@@ -7,7 +7,6 @@ const SEARCH_API = `https://api.themoviedb.org/3/search/movie?&api_key=${process
 
 function App() {
   const [movies, setMovies] = useState([]);
-
   useEffect(() => {
     async function fetchData() {
       const moviesResp = await fetch(FEATURED_API);
@@ -21,9 +20,11 @@ function App() {
 
   return (
     <div className="App">
+      <div className="movie-container">
       {movies.length > 0 && movies.map((movie) =>
-
-        <Movie key={movie.id} data={movie}/> )}
+        <Movie key={movie.id} {...movie} />
+      )}
+      </div>
     </div>
   );
 }
