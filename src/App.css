@@ -127,3 +127,17 @@ code {
 .tag.red {
   color: red;
 }
+
+/* Icon Style */
+
+.home-button {
+  background-color: #3CC47C;
+  border: none;
+  margin-left: 25px;
+  cursor: pointer;
+}
+
+.home-button {
+  font-size: 32px;
+  color: white;
+}
